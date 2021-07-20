@@ -1,5 +1,5 @@
 # TicTacToe
-The classic Tic-Tac-Toe game (also called Noughts and Crosses) or Xs and Os is a paper-and-pencil game for two players,
+The classic Tic-Tac-Toe game, Xs and Os is a paper-and-pencil game for two players,
 X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a 
 horizontal, vertical, or diagonal row is the winner.
 
@@ -14,36 +14,6 @@ time, the game is won as follows :
 >* 44 distinct positions are won by (O)<br>
 >* 3 distinct positions are drawn (often called a "cat's game")
 
-### Pseudocode
-~~~~
-function minimax(node, depth, isMaximizingPlayer, alpha, beta):
-
-    if node is a leaf node :
-        return value of the node
-    
-    if isMaximizingPlayer :
-        bestVal = -INFINITY 
-        for each child node :
-            value = minimax(node, depth+1, false, alpha, beta)
-            bestVal = max( bestVal, value) 
-            alpha = max( alpha, bestVal)
-            if beta <= alpha:
-                break
-        return bestVal
-
-    else :
-        bestVal = +INFINITY 
-        for each child node :
-            value = minimax(node, depth+1, true, alpha, beta)
-            bestVal = min( bestVal, value) 
-            beta = min( beta, bestVal)
-            if beta <= alpha:
-                break
-        return bestVal
-        
-// Calling the function for the first time.
-minimax(0, 0, true, -INFINITY, +INFINITY)
-~~~~
 
 ### Minimax Algorithm Visualisation
 ![alt text](https://github.com/Prajwal-P/TicTacToe-with-AI/blob/master/MiniMax-algorithm.png)
